@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Info</title>
+    <link rel="stylesheet" href="sources/css/styles.css">
+</head>
+<body>
+    <script src = "./sources/js/index.js"></script>
+    <div class="searchAndFilter" id="searchAndFilter">
+        <h3>Movie Info</h3>
+        <input type="text" id="movieQuery" placeholder="Enter movie name">
+        <button class="button" onclick="searchMovie()">Search</button>
+        <h3>Movie List</h3>
+        <input type="text" id="filterQuery" placeholder="Filter movies">
+        <button class="button" onclick="filterMovies()">Filter</button>
+    </div>
+    <div id="movieDetails"></div>
+    <div id="movieList" class="movieList"></div>
+    <div id="pagination">
+        <button onclick="changePage(-1)">Previous</button>
+        <span id="currentPage">1</span>
+        <button onclick="changePage(1)">Next</button>
+    </div>
+
+    <span id="userNameDecoration"></span>
+    <div class="modal" id="authModal">
+        <div class="modalContent">
+            <span class="close" id="closeModal">&times;</span>
+            <input type="text" id="username" placeholder="Your name">
+            <div id="usernameError" class="errorMessage"></div>
+            <div class="modalButtons">
+                <button class="button" id="okAuthButton">OK</button>
+                <button class="button" id="cancelAuthButton">Cancel</button>
+            </div>
+        </div>
+    </div>
+</body>
