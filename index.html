@@ -10,12 +10,31 @@
 <body>
     <script src = "./sources/js/index.js"></script>
     <div class="searchAndFilter" id="searchAndFilter">
-        <h3>Movie Info</h3>
-        <input type="text" id="movieQuery" placeholder="Enter movie name">
-        <button class="button" onclick="searchMovie()">Search</button>
-        <h3>Movie List</h3>
-        <input type="text" id="filterQuery" placeholder="Filter movies">
-        <button class="button" onclick="filterMovies()">Filter</button>
+        <div class="filtersSearches">
+            <input type="text" id="movieQuery" placeholder="Enter movie name">
+            <button class="button" onclick="searchMovie()">Search</button> </br>
+            <input type="text" id="filterQuery" placeholder="Filter movies">
+            <label for="filterDropdown"> by:</label>
+            <select id="filterDropdown">
+                <option value="query">By query in title</option>
+                <option value="primary_release_year">By release year</option>
+                <option value="with_origin_country">by origin counntry</option>
+                <option value="with_keyword">by keyword</option>
+            </select>
+            <button class="button" onclick="filterMovies()">Filter</button>
+        </div>
+        <label for="sortDropdown"> Show movies by order of sort:</label>
+        <select id="sortDropdown" onchange="fetchMovies()">
+            <option value="popularity.desc">By popularity descending</option>
+            <option value="popularity.asc">By popularity ascending</option>
+            <option value="primary_release_date.desc">by release date descending</option>
+            <option value="primary_release_date.asc">by release date ascending</option>
+            <option value="original_title.asc">by title ascending</option>
+            <option value="original_title.desc">by title descending</option>
+            <option value="vote_average.desc">by votes descending</option>
+            <option value="vote_average.asc">by votes ascending</option>
+        </select>
+        <button onclick="showFavoriteList()">Favorite   <img class="imgOnButton" src="./sources/img/checked.png"></button>
     </div>
     <div id="movieDetails"></div>
     <div id="movieList" class="movieList"></div>

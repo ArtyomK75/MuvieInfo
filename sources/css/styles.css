@@ -37,11 +37,15 @@ button {
     align-items: center;    
 }
 
-.discriptionDetails {
+.descriptionDetails {
     max-width: 800px;
 }
 .movie-poster {
     max-width: 200px;
+}
+
+.movie-poster-full {
+    max-width: 800px;
 }
 
 #pagination {
@@ -118,15 +122,45 @@ button {
     right: 100px;
 }
 
-#personalDiscription {
+#personalDescription {
     width: 600px;
     height: 100px;
 }
 
-.personalDiscriptionConteiner {
+.personalDescriptionConteiner {
     display: flex;
 }
 
-#savePersonalDiscription{
+#savePersonalDescription{
     height: fit-content;
+}
+
+.addToFavoriteImg {
+    height: 50px;
+    margin-left: 150px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: border 0.3s;    
+}
+
+.homepage_link {
+    margin-right: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.addInfo {
+    text-align: left;
+    margin-left: 40%;
+}
+
+.addedCheckUnvisible {
+    visibility: visible;
+}
+.addedCheckUnvisible {
+    visibility: hidden;
+}
+
+.imgOnButton {
+    height: 50%;
 }
